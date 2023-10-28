@@ -1,0 +1,39 @@
+[debug] [2023-10-27T19:36:06.560Z] ----------------------------------------------------------------------
+[debug] [2023-10-27T19:36:06.562Z] Command:       /usr/local/bin/node /usr/local/bin/firebase init
+[debug] [2023-10-27T19:36:06.562Z] CLI Version:   12.7.0
+[debug] [2023-10-27T19:36:06.562Z] Platform:      darwin
+[debug] [2023-10-27T19:36:06.563Z] Node Version:  v18.18.0
+[debug] [2023-10-27T19:36:06.564Z] Time:          Fri Oct 27 2023 15:36:06 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-10-27T19:36:06.564Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-10-27T19:36:06.568Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-10-27T19:36:06.568Z] > authorizing via signed-in user (biml16gb@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/cado/c12/react/movies-app
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-10-27T19:36:52.538Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-10-27T19:36:52.538Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"Horror-movies-app-Mp","name":"Horror-movies-app-Mp"}
+[debug] [2023-10-27T19:36:52.736Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2023-10-27T19:36:52.736Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2023-10-27T19:36:52.738Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.

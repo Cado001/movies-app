@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+
+  @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  box-sizing: border-box;
+  font-family: Creepster;
+  background: url(../public/Images/place4.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: #aada1b;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  background-image: url(../public/Images/place6.jpeg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0px -270px;
+  /* background-color: aada1b; */
+  width: 100%;
+  max-width: 1024px;
+  padding: 0 15px;
+  margin: 7rem auto;
+  /* color: rgb(63, 62, 62);p */
+  font-size: 20px;
+
+  border-radius: 15px 50px;
+  border: solid #ea1919 5px;
+  border-style: double;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loser {
+  min-height: 250px;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto 1em;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  color: #aada1b;
+  line-height: 1;
+  font-size: 70px;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 0 25px rgb(0, 0, 0 / 25%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-items {
+  max-width: 1024px;
+  margin: 5rem auto;
+  column-count: 2;
+  column-gap: 20px;
+  padding: 0 5rem;
+}
+
+.movie-item {
+  page-break-inside: avoid;
+  padding: 0 1em 1em;
+}
+
+.movie-item > p {
+  font-size: 15px;
 }
